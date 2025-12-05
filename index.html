@@ -10,8 +10,6 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="search-overlay"></div>
-
     <header id="main_header">
       <div class="container">
         <div class="header_inner">
@@ -37,21 +35,29 @@
           </nav>
 
           <div class="header_actions">
-            <button class="action_btn search_btn" title="Поиск">
+            <a href="/search" class="action_btn search_btn" title="Поиск">
               <img src="icons/search.svg" alt="Поиск" />
-            </button>
+            </a>
 
-            <button class="action_btn chat_btn" title="Чат">
+            <a href="/chat" class="action_btn chat_btn" title="Чат">
               <img src="icons/chat.svg" alt="Чат" />
-            </button>
+            </a>
 
-            <button class="action_btn wishlist_btn" title="Избранное">
+            <a
+              href="/wishlist"
+              class="action_btn wishlist_btn"
+              title="Избранное"
+            >
               <img src="icons/heart.svg" alt="Избранное" />
-            </button>
+            </a>
 
-            <button class="action_btn profile_btn" title="Мой профиль">
+            <a
+              href="/profile"
+              class="action_btn profile_btn"
+              title="Мой профиль"
+            >
               <img src="icons/user.svg" alt="Профиль" />
-            </button>
+            </a>
 
             <a href="/cart" class="action_btn cart_btn" title="Корзина">
               <img src="icons/cart.svg" alt="Корзина" />
@@ -110,16 +116,293 @@
           </div>
 
           <div class="carousel_indicators">
-            <button class="indicator active" onclick="go_to_slide(0)"></button>
-            <button class="indicator" onclick="go_to_slide(1)"></button>
-            <button class="indicator" onclick="go_to_slide(2)"></button>
+            <button class="indicator active"></button>
+            <button class="indicator"></button>
+            <button class="indicator"></button>
           </div>
         </div>
       </section>
 
-      <section class="categories_grid"></section>
+      <section class="categories_grid">
+        <div class="categories_container">
+          <div class="grid_three">
+            <div class="category_card">
+              <a href="/collections" class="category_link">
+                <img
+                  src="images/categories/glasses.jpg"
+                  alt="Очки"
+                  class="category_image"
+                />
+                <div class="category_content">
+                  <p class="category_title">коллекции</p>
+                  <p class="category_subtitle">Оптика без времени</p>
+                </div>
+              </a>
+            </div>
+            <div class="category_card">
+              <a href="/trends" class="category_link">
+                <img
+                  src="images/categories/sunglasses.jpg"
+                  alt="Солнечные очки на моделях"
+                  class="category_image"
+                />
+                <div class="category_content">
+                  <p class="category_title">тренды</p>
+                  <p class="category_subtitle">Солнцезащитные очки — 2025</p>
+                </div>
+              </a>
+            </div>
+            <div class="category_card">
+              <a href="/collections/frames" class="category_link">
+                <img
+                  src="images/categories/frames.jpg"
+                  alt="Оправы-невидимки"
+                  class="category_image"
+                />
+                <div class="category_content">
+                  <p class="category_title">коллекции</p>
+                  <p class="category_subtitle">Невидимые оправы</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
 
-      <section class="products_carousel"></section>
+      <section class="products_carousel">
+        <div class="products_container">
+          <h2 class="section_title">В центре внимания</h2>
+          <div class="products_carousel_container">
+            <div class="products_carousel_track">
+              <div class="product_slide active">
+                <div class="product_card">
+                  <div class="product_image_left">
+                    <img
+                      src="images/products/model1.jpg"
+                      alt="Модель в очках Clear Sky"
+                      class="product_image"
+                    />
+                    <div class="image_overlay"></div>
+                    <div class="image_text_left">
+                      <div class="main_caption">Стиль с заботой о будущем</div>
+                    </div>
+                  </div>
+
+                  <div class="product_image_right">
+                    <img
+                      src="images/products/product1.jpg"
+                      alt="Оправа Clear Sky"
+                      class="product_image"
+                    />
+                    <div class="image_overlay"></div>
+
+                    <a
+                      href="/wishlist"
+                      class="wishlist_btn_product"
+                      title="Добавить в избранное"
+                    >
+                      <img src="icons/heart.svg" alt="Избранное" />
+                    </a>
+                    <div class="image_text_right">
+                      <h3 class="product_name">Оправа Clear Sky</h3>
+                      <div class="product_price">от 8 666 &#8381;</div>
+                      <div class="product_actions">
+                        <a href="/try-on" class="product_action_link"
+                          >примерить онлайн</a
+                        >
+                        <a href="/product/1" class="product_action_link"
+                          >узнать подробнее</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- 2 -->
+              <div class="product_slide">
+                <div class="product_card">
+                  <div class="product_image_left">
+                    <img
+                      src="images/products/model1.jpg"
+                      alt="Модель в очках Clear Sky"
+                      class="product_image"
+                    />
+                    <div class="image_overlay"></div>
+                    <div class="image_text_left">
+                      <div class="main_caption">2</div>
+                    </div>
+                  </div>
+
+                  <div class="product_image_right">
+                    <img
+                      src="images/products/product1.jpg"
+                      alt="Оправа Clear Sky"
+                      class="product_image"
+                    />
+                    <div class="image_overlay"></div>
+                    <button
+                      class="wishlist_btn_product"
+                      title="Добавить в избранное"
+                    >
+                      <img src="icons/heart.svg" alt="Избранное" />
+                    </button>
+                    <div class="image_text_right">
+                      <h3 class="product_name">Оправа Clear Sky</h3>
+                      <div class="product_price">от 8 666 &#8381;</div>
+                      <div class="product_actions">
+                        <a href="/try-on" class="product_action_link"
+                          >примерить онлайн</a
+                        >
+                        <a href="/product/1" class="product_action_link"
+                          >узнать подробнее</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- 3 -->
+              <div class="product_slide">
+                <div class="product_card">
+                  <div class="product_image_left">
+                    <img
+                      src="images/products/model1.jpg"
+                      alt="Модель в очках Clear Sky"
+                      class="product_image"
+                    />
+                    <div class="image_overlay"></div>
+                    <div class="image_text_left">
+                      <div class="main_caption">3</div>
+                    </div>
+                  </div>
+
+                  <div class="product_image_right">
+                    <img
+                      src="images/products/product1.jpg"
+                      alt="Оправа Clear Sky"
+                      class="product_image"
+                    />
+                    <div class="image_overlay"></div>
+                    <button
+                      class="wishlist_btn_product"
+                      title="Добавить в избранное"
+                    >
+                      <img src="icons/heart.svg" alt="Избранное" />
+                    </button>
+                    <div class="image_text_right">
+                      <h3 class="product_name">Оправа Clear Sky</h3>
+                      <div class="product_price">от 8 666 &#8381;</div>
+                      <div class="product_actions">
+                        <a href="/try-on" class="product_action_link"
+                          >примерить онлайн</a
+                        >
+                        <a href="/product/1" class="product_action_link"
+                          >узнать подробнее</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- 4 -->
+              <div class="product_slide">
+                <div class="product_card">
+                  <div class="product_image_left">
+                    <img
+                      src="images/products/model1.jpg"
+                      alt="Модель в очках Clear Sky"
+                      class="product_image"
+                    />
+                    <div class="image_overlay"></div>
+                    <div class="image_text_left">
+                      <div class="main_caption">4</div>
+                    </div>
+                  </div>
+
+                  <div class="product_image_right">
+                    <img
+                      src="images/products/product1.jpg"
+                      alt="Оправа Clear Sky"
+                      class="product_image"
+                    />
+                    <div class="image_overlay"></div>
+                    <button
+                      class="wishlist_btn_product"
+                      title="Добавить в избранное"
+                    >
+                      <img src="icons/heart.svg" alt="Избранное" />
+                    </button>
+                    <div class="image_text_right">
+                      <h3 class="product_name">Оправа Clear Sky</h3>
+                      <div class="product_price">от 8 666 &#8381;</div>
+                      <div class="product_actions">
+                        <a href="/try-on" class="product_action_link"
+                          >примерить онлайн</a
+                        >
+                        <a href="/product/1" class="product_action_link"
+                          >узнать подробнее</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- 5 -->
+              <div class="product_slide">
+                <div class="product_card">
+                  <div class="product_image_left">
+                    <img
+                      src="images/products/model1.jpg"
+                      alt="Модель в очках Clear Sky"
+                      class="product_image"
+                    />
+                    <div class="image_overlay"></div>
+                    <div class="image_text_left">
+                      <div class="main_caption">5</div>
+                    </div>
+                  </div>
+
+                  <div class="product_image_right">
+                    <img
+                      src="images/products/product1.jpg"
+                      alt="Оправа Clear Sky"
+                      class="product_image"
+                    />
+                    <div class="image_overlay"></div>
+                    <button
+                      class="wishlist_btn_product"
+                      title="Добавить в избранное"
+                    >
+                      <img src="icons/heart.svg" alt="Избранное" />
+                    </button>
+                    <div class="image_text_right">
+                      <h3 class="product_name">Оправа Clear Sky</h3>
+                      <div class="product_price">от 8 666 &#8381;</div>
+                      <div class="product_actions">
+                        <a href="/try-on" class="product_action_link"
+                          >примерить онлайн</a
+                        >
+                        <a href="/product/1" class="product_action_link"
+                          >узнать подробнее</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Индикаторы -->
+            <div class="products_carousel_indicators">
+              <button class="product_indicator active"></button>
+              <button class="product_indicator"></button>
+              <button class="product_indicator"></button>
+              <button class="product_indicator"></button>
+              <button class="product_indicator"></button>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <section class="about_text"></section>
 

@@ -1,47 +1,57 @@
-var current_slide=0;
-var interval=null;
-var slides=document.querySelectorAll(".carousel_slide");
-var indicators=document.querySelectorAll(".indicator");
-
-function go_to_slide(index){
-    slides.forEach(slide=>{
-		slide.classList.remove("active");
+function init_all_carousels(){
+	var carousels=[
+		{
+			container:".hero_carousel",
+			slide_class:"carousel_slide",
+			indicator_class:"indicator"
+		},
+		{
+			container:".products_carousel_container",
+			slide_class:"product_slide",
+			indicator_class:"product_indicator"
+		}
+	];
+	
+	carousels.forEach(carousel_config=>{
+		var container=document.querySelector(carousel_config.container);
+		if(!container) return;
+		
+		var slides=container.querySelectorAll("."+carousel_config.slide_class);
+		var indicators=container.querySelectorAll("."+carousel_config.indicator_class);
+		var current=0;
+		var interval;
+		
+		if(slides.length===0) return;
+		
+		function show_slide(index){
+			slides.forEach(slide=>slide.classList.remove("active"));
+			indicators.forEach(indicator=>indicator.classList.remove("active"));
+			
+			current=index;
+			slides[current].classList.add("active");
+			if(indicators[current]) indicators[current].classList.add("active");
+		}
+		
+		function next(){
+			show_slide((current+1)%slides.length);
+		}
+		
+		interval=setInterval(next,5000);
+		
+		container.addEventListener("mouseenter",()=>clearInterval(interval));
+		container.addEventListener("mouseleave",()=>{
+			clearInterval(interval);
+			interval=setInterval(next,5000);
+		});
+		
+		indicators.forEach((indicator,index)=>{
+			indicator.addEventListener("click",()=>{
+				show_slide(index);
+				clearInterval(interval);
+				interval=setInterval(next,5000);
+			});
+		});
 	});
-
-	indicators.forEach(indicator=>{
-		indicator.classList.remove("active");
-	});
-
-	current_slide=index;
-	slides[current_slide].classList.add("active");
-	indicators[current_slide].classList.add("active");
 }
 
-function next_slide(){
-	var next=(current_slide+1)%slides.length;
-	go_to_slide(next);
-}
-
-function start_autoplay(){
-	if(interval){
-		clearInterval(interval);
-	}
-	interval=setInterval(next_slide,5000);
-}
-
-function stop_autoplay(){
-	if(interval){
-		clearInterval(interval);
-		interval=null;
-	}
-}
-
-document.addEventListener("DOMContentLoaded",()=>{
-	start_autoplay();
-
-	var carousel=document.querySelector(".hero_carousel");
-	if(carousel){
-		carousel.addEventListener("mouseenter",stop_autoplay);
-		carousel.addEventListener("mouseleave",start_autoplay);
-	}
-});
+document.addEventListener("DOMContentLoaded",init_all_carousels);
