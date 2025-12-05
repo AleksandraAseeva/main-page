@@ -76,6 +76,12 @@
                 src="images/hero/slide1.jpg"
                 alt="Легкость вне гравитации"
                 class="slide_image"
+                srcset="
+                  images/hero/slide1.jpg        1920w,
+                  images/hero/slide1-tablet.jpg  768w,
+                  images/hero/slide1-mobile.jpg  480w
+                "
+              />
               />
               <div class="slide_content">
                 <h1 class="slide_title">Лёгкость вне гравитации</h1>
@@ -404,16 +410,191 @@
         </div>
       </section>
 
-      <section class="about_text"></section>
+      <section class="collections_gallery">
+        <div class="about_text">
+          <p class="about_paragraph">
+            Silhouette — это абсолютная<br />
+            точность, инновации<br />
+            и внимание к деталям.
+          </p>
+        </div>
 
-      <section class="collections_gallery"></section>
+        <div class="collections_container">
+          <div class="collections_grid">
+            <div class="collection_item tall">
+              <a href="/collection/summer-2025" class="collection_link">
+                <img src="images/collections/summer.jpg" alt="Лето 2025" />
+                <div class="collection_content">
+                  <h3>Лето 2025</h3>
+                  <span>открыть коллекцию</span>
+                </div>
+              </a>
+            </div>
 
-      <section class="blog_preview"></section>
+            <div class="collection_item medium">
+              <a href="/collection/illusion-lite" class="collection_link">
+                <img
+                  src="images/collections/illusion.jpg"
+                  alt="Illusion Lite"
+                />
+                <div class="collection_content">
+                  <h3>Accent Shades: выразительный минимализм</h3>
+                  <span>открыть коллекцию</span>
+                </div>
+              </a>
+            </div>
 
-      <section class="advantages"></section>
+            <div class="collection_item small">
+              <a href="/collection/accent-shades" class="collection_link">
+                <img src="images/collections/accent.jpg" alt="Accent Shades" />
+                <div class="collection_content">
+                  <h3>Illusion Lite: лёгкая классика на каждый деньes</h3>
+                  <span>открыть коллекцию</span>
+                </div>
+              </a>
+            </div>
+
+            <div class="collection_item medium">
+              <a href="/collection/spielberg" class="collection_link">
+                <img
+                  src="images/collections/sport.jpg"
+                  alt="Коллекция Spielberg"
+                />
+                <div class="collection_content">
+                  <h3>Коллекция Spielberg: спортивный характер</h3>
+                  <span>открыть коллекцию</span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="gallery_actions">
+            <a href="/collections" class="btn btn_secondary">Все коллекции</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="blog_preview">
+        <div class="container_blog_preview">
+          <h2 class="blog_preview_title">Новости и статьи</h2>
+          <div class="blog_grid">
+            <div class="blog_card">
+              <a href="/blog/1" class="blog_link">
+                <img
+                  src="images/blog/1.jpg"
+                  alt="Как выбрать идеальные очки"
+                  class="blog_image"
+                />
+                <div class="blog_content">
+                  <h3 class="blog_title">
+                    Как выбрать идеальные очки: форма, стиль, технология
+                  </h3>
+                  <div class="blog_meta">
+                    <span class="blog_date">16.07.2025</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="blog_card">
+              <a href="/blog/2" class="blog_link">
+                <img
+                  src="images/blog/2.jpg"
+                  alt="Экологичный взгляд"
+                  class="blog_image"
+                />
+                <div class="blog_content">
+                  <h3 class="blog_title">
+                    Экологичный взгляд: как создаются устойчивые очки будущего
+                  </h3>
+                  <div class="blog_meta">
+                    <span class="blog_date">16.07.2025</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="blog_card">
+              <a href="/blog/3" class="blog_link">
+                <img
+                  src="images/blog/3.jpg"
+                  alt="Silhouette"
+                  class="blog_image"
+                />
+                <div class="blog_content">
+                  <h3 class="blog_title">
+                    Silhouette: от австрийской мастерской к иконе минимализма
+                  </h3>
+                  <div class="blog_meta">
+                    <span class="blog_date">16.07.2025</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="blog_actions">
+            <a href="/blog" class="btn btn_secondary">перейти в блог</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="advantages" aria-label="Преимущества нашей компании">
+        <div class="container_advantages">
+          <ul class="advantages_grid" role="list">
+            <li class="advantage_item">
+              <figure>
+                <img
+                  src="images/advantages/icon1.png"
+                  alt=""
+                  aria-hidden="true"
+                />
+                <figcaption class="advantage_text">
+                  Финальная стоимость понятна ещё на этапе выбора
+                </figcaption>
+              </figure>
+            </li>
+            <li class="advantage_item">
+              <figure>
+                <img
+                  src="images/advantages/icon2.png"
+                  alt=""
+                  aria-hidden="true"
+                />
+                <figcaption class="advantage_text">
+                  Посадка и выправка с учётом ваших особенностей
+                </figcaption>
+              </figure>
+            </li>
+            <li class="advantage_item">
+              <figure>
+                <img
+                  src="images/advantages/icon3.png"
+                  alt=""
+                  aria-hidden="true"
+                />
+                <figcaption class="advantage_text">
+                  Доставка до двери по Москве и регионам
+                </figcaption>
+              </figure>
+            </li>
+            <li class="advantage_item">
+              <figure>
+                <img
+                  src="images/advantages/icon4.png"
+                  alt=""
+                  aria-hidden="true"
+                />
+                <figcaption class="advantage_text">
+                  Гарантия 365 дней на очки и оправы
+                </figcaption>
+              </figure>
+            </li>
+          </ul>
+        </div>
+      </section>
     </main>
 
-    <footer class="footer"></footer>
+    <footer class="footer">
+      <p>реализовано без футера</p>
+    </footer>
 
     <script src="script.js"></script>
   </body>
