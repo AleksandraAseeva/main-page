@@ -1,44 +1,87 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
     <title>Silhouette</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="search-overlay">
-    </div>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="search-overlay"></div>
 
-    <header class="header">
+    <header id="main_header">
+      <div class="container">
+        <div class="header_inner">
+          <a href="/" class="header_logo">
+            <div class="logo_main">
+                <img src="images/logo.svg" alt="лготип">
+            </div>
+            <div class="logo_separator"></div>
+            <div class="logo_subtext">
+              <span class="logo_line1">официально</span>
+              <span class="logo_line2">в России</span>
+            </div>
+          </a>
+
+          <nav class="header_nav">
+            <ul class="nav_list">
+              <li>
+                <a href="/sunglasses" class="nav_link">Солнцезащитные очки</a>
+              </li>
+              <li><a href="/frames" class="nav_link">Оправы</a></li>
+              <li><a href="/blog" class="nav_link">Блог</a></li>
+            </ul>
+          </nav>
+
+          <div class="header_actions">
+            <button class="action_btn search_btn" title="Поиск">
+              <img src="icons/search.svg" alt="Поиск" />
+            </button>
+
+            <button class="action_btn chat_btn" title="Чат">
+              <img src="icons/chat.svg" alt="Чат" />
+            </button>
+
+            <button class="action_btn wishlist_btn" title="Избранное">
+              <img
+                src="icons/heart.svg"
+                alt="Избранное"
+              />
+            </button>
+
+            <button class="action_btn profile_btn" title="Мой профиль">
+              <img
+                src="icons/user.svg"
+                alt="Профиль"
+              />
+            </button>
+
+            <a href="/cart" class="action_btn cart_btn" title="Корзина">
+              <img src="icons/cart.svg" alt="Корзина"/> 
+            </a>
+          </div>
+        </div>
+      </div>
     </header>
 
     <main>
-        <section class="hero_carousel">
-        </section>
+      <section class="hero_carousel"></section>
 
-        <section class="categories_grid">
-        </section>
+      <section class="categories_grid"></section>
 
-        <section class="products_carousel">
-        </section>
+      <section class="products_carousel"></section>
 
-        <section class="about_text">
-        </section>
+      <section class="about_text"></section>
 
-        <section class="collections_gallery">
-        </section>
+      <section class="collections_gallery"></section>
 
-        <section class="blog_preview">
-        </section>
+      <section class="blog_preview"></section>
 
-        <section class="advantages">
-        </section>
+      <section class="advantages"></section>
     </main>
 
-    <footer class="footer">
-    </footer>
+    <footer class="footer"></footer>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
