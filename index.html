@@ -3,7 +3,10 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
     <title>Silhouette</title>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;500&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -14,7 +17,7 @@
         <div class="header_inner">
           <a href="/" class="header_logo">
             <div class="logo_main">
-                <img src="images/logo.svg" alt="лготип">
+              <img src="images/logo.svg" alt="лготип" />
             </div>
             <div class="logo_separator"></div>
             <div class="logo_subtext">
@@ -43,21 +46,15 @@
             </button>
 
             <button class="action_btn wishlist_btn" title="Избранное">
-              <img
-                src="icons/heart.svg"
-                alt="Избранное"
-              />
+              <img src="icons/heart.svg" alt="Избранное" />
             </button>
 
             <button class="action_btn profile_btn" title="Мой профиль">
-              <img
-                src="icons/user.svg"
-                alt="Профиль"
-              />
+              <img src="icons/user.svg" alt="Профиль" />
             </button>
 
             <a href="/cart" class="action_btn cart_btn" title="Корзина">
-              <img src="icons/cart.svg" alt="Корзина"/> 
+              <img src="icons/cart.svg" alt="Корзина" />
             </a>
           </div>
         </div>
@@ -65,7 +62,60 @@
     </header>
 
     <main>
-      <section class="hero_carousel"></section>
+      <section class="hero_carousel">
+        <div class="carousel_container">
+          <div class="carousel_track">
+            <div class="carousel_slide active">
+              <img
+                src="images/hero/slide1.jpg"
+                alt="Легкость вне гравитации"
+                class="slide_image"
+              />
+              <div class="slide_content">
+                <h1 class="slide_title">Лёгкость вне гравитации</h1>
+                <p class="slide_subtitle">Невесомые титановые оправы</p>
+                <a href="/collection/titanium" class="btn btn_primary"
+                  >Подробнее</a
+                >
+              </div>
+            </div>
+            <div class="carousel_slide">
+              <img
+                src="images/hero/slide2.jpg"
+                alt="Стиль на каждый день"
+                class="slide_image"
+              />
+              <div class="slide_content">
+                <h1 class="slide_title">Слайд 2</h1>
+                <p class="slide_subtitle">Описание слайда 2</p>
+                <a href="/collection/classic" class="btn btn_primary"
+                  >Подробнее</a
+                >
+              </div>
+            </div>
+            <div class="carousel_slide">
+              <img
+                src="images/hero/slide3.jpg"
+                alt="Спортивные технологии"
+                class="slide_image"
+              />
+              <div class="slide_content">
+                <h1 class="slide_title">Слайд 3</h1>
+                <p class="slide_subtitle">Описание слайда 3</p>
+                <a href="/collection/sport" class="btn btn_primary"
+                  >Подробнее</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel_indicators">
+            <button class="indicator active" onclick="go_to_slide(0)"></button>
+            <button class="indicator" onclick="go_to_slide(1)"></button>
+            <button class="indicator" onclick="go_to_slide(2)"></button>
+          </div>
+        </div>
+      </section>
 
       <section class="categories_grid"></section>
 
