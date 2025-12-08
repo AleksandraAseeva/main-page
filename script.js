@@ -9,48 +9,94 @@ function init_all_carousels(){
 			container:".products_carousel_container",
 			slide_class:"product_slide",
 			indicator_class:"product_indicator"
+		},
+		{
+			container:".categories_container",
+			slide_class:"category_card",
+			prev_btn:".categories_nav_prev",
+			next_btn:".categories_nav_next"
 		}
 	];
 	
-	carousels.forEach(carousel_config=>{
+	carousels.forEach(function(carousel_config){
 		var container=document.querySelector(carousel_config.container);
-		if(!container) return;
+		if(!container){
+			return;
+		}
 		
 		var slides=container.querySelectorAll("."+carousel_config.slide_class);
 		var indicators=container.querySelectorAll("."+carousel_config.indicator_class);
+		var prevBtn=carousel_config.prev_btn?container.querySelector(carousel_config.prev_btn):null;
+		var nextBtn=carousel_config.next_btn?container.querySelector(carousel_config.next_btn):null;
 		var current=0;
 		var interval;
 		
-		if(slides.length===0) return;
+		if(slides.length===0){
+			return;
+		}
 		
 		function show_slide(index){
-			slides.forEach(slide=>slide.classList.remove("active"));
-			indicators.forEach(indicator=>indicator.classList.remove("active"));
+			slides.forEach(function(slide){
+				slide.classList.remove("active");
+			});
+			indicators.forEach(function(indicator){
+				indicator.classList.remove("active");
+			});
 			
 			current=index;
 			slides[current].classList.add("active");
-			if(indicators[current]) indicators[current].classList.add("active");
+			if(indicators[current]){
+				indicators[current].classList.add("active");
+			}
 		}
 		
 		function next(){
 			show_slide((current+1)%slides.length);
 		}
 		
-		interval=setInterval(next,5000);
+		function prev(){
+			show_slide((current-1+slides.length)%slides.length);
+		}
 		
-		container.addEventListener("mouseenter",()=>clearInterval(interval));
-		container.addEventListener("mouseleave",()=>{
-			clearInterval(interval);
-			interval=setInterval(next,5000);
-		});
-		
-		indicators.forEach((indicator,index)=>{
-			indicator.addEventListener("click",()=>{
-				show_slide(index);
-				clearInterval(interval);
-				interval=setInterval(next,5000);
+		if(prevBtn&&nextBtn){
+			prevBtn.addEventListener("click",function(){
+				prev();
+				reset_interval();
 			});
-		});
+			
+			nextBtn.addEventListener("click",function(){
+				next();
+				reset_interval();
+			});
+		}
+		
+		if(indicators.length>0){
+			interval=setInterval(next,5000);
+			
+			container.addEventListener("mouseenter",function(){
+				clearInterval(interval);
+			});
+			
+			container.addEventListener("mouseleave",function(){
+				reset_interval();
+			});
+			
+			indicators.forEach(function(indicator,index){
+				indicator.addEventListener("click",function(){
+					show_slide(index);
+					reset_interval();
+				});
+			});
+		}
+		
+		function reset_interval(){
+			if(interval){
+				clearInterval(interval);
+			}
+			interval=setInterval(next,5000);
+		}
+		
+		show_slide(0);
 	});
 }
 

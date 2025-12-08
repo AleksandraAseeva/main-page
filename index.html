@@ -1,601 +1,470 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
-    <title>Silhouette</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header id="main_header">
-      <div class="container">
-        <div class="header_inner">
-          <a href="/" class="header_logo">
-            <div class="logo_main">
-              <img src="images/logo.svg" alt="Р»РіРѕС‚РёРї" />
-            </div>
-            <div class="logo_separator"></div>
-            <div class="logo_subtext">
-              <span class="logo_line1">РѕС„РёС†РёР°Р»СЊРЅРѕ</span>
-              <span class="logo_line2">РІ Р РѕСЃСЃРёРё</span>
-            </div>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+
+  <title>Silhouette</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header id="main_header">
+    <div class="container">
+      <div class="header_inner">
+        <a href="/" class="header_logo">
+          <div class="logo_main">
+            <img src="images/logo.svg" alt="лготип" />
+          </div>
+          <div class="logo_separator"></div>
+          <div class="logo_subtext">
+            <span class="logo_line1">официально</span>
+            <span class="logo_line2">в России</span>
+          </div>
+        </a>
+
+        <nav class="header_nav">
+          <ul class="nav_list">
+            <li>
+              <a href="/sunglasses" class="nav_link">Солнцезащитные очки</a>
+            </li>
+            <li><a href="/frames" class="nav_link">Оправы</a></li>
+            <li><a href="/blog" class="nav_link">Блог</a></li>
+          </ul>
+        </nav>
+
+        <div class="header_actions">
+          <a href="/search" class="action_btn search_btn" title="Поиск">
+            <img src="icons/search.svg" alt="Поиск" />
           </a>
 
-          <nav class="header_nav">
-            <ul class="nav_list">
-              <li>
-                <a href="/sunglasses" class="nav_link">РЎРѕР»РЅС†РµР·Р°С‰РёС‚РЅС‹Рµ РѕС‡РєРё</a>
-              </li>
-              <li><a href="/frames" class="nav_link">РћРїСЂР°РІС‹</a></li>
-              <li><a href="/blog" class="nav_link">Р‘Р»РѕРі</a></li>
-            </ul>
-          </nav>
+          <a href="/chat" class="action_btn chat_btn" title="Чат">
+            <img src="icons/chat.svg" alt="Чат" />
+          </a>
 
-          <div class="header_actions">
-            <a href="/search" class="action_btn search_btn" title="РџРѕРёСЃРє">
-              <img src="icons/search.svg" alt="РџРѕРёСЃРє" />
-            </a>
+          <a href="/wishlist" class="action_btn wishlist_btn" title="Избранное">
+            <img src="icons/heart.svg" alt="Избранное" />
+          </a>
 
-            <a href="/chat" class="action_btn chat_btn" title="Р§Р°С‚">
-              <img src="icons/chat.svg" alt="Р§Р°С‚" />
-            </a>
+          <a href="/profile" class="action_btn profile_btn" title="Мой профиль">
+            <img src="icons/user.svg" alt="Профиль" />
+          </a>
 
-            <a
-              href="/wishlist"
-              class="action_btn wishlist_btn"
-              title="РР·Р±СЂР°РЅРЅРѕРµ"
-            >
-              <img src="icons/heart.svg" alt="РР·Р±СЂР°РЅРЅРѕРµ" />
-            </a>
+          <a href="/cart" class="action_btn cart_btn" title="Корзина">
+            <img src="icons/cart.svg" alt="Корзина" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
 
-            <a
-              href="/profile"
-              class="action_btn profile_btn"
-              title="РњРѕР№ РїСЂРѕС„РёР»СЊ"
-            >
-              <img src="icons/user.svg" alt="РџСЂРѕС„РёР»СЊ" />
-            </a>
+  <main>
+    <section class="hero_carousel">
+      <div class="carousel_container">
+        <div class="carousel_track">
+          <div class="carousel_slide active">
+            <div class="slide_image"></div>
+            <div class="slide_content">
+              <h1 class="slide_title">Лёгкость вне гравитации</h1>
+              <p class="slide_subtitle">Невесомые титановые оправы</p>
+              <a href="/collection/titanium" class="btn btn_primary">Подробнее</a>
+            </div>
+          </div>
 
-            <a href="/cart" class="action_btn cart_btn" title="РљРѕСЂР·РёРЅР°">
-              <img src="icons/cart.svg" alt="РљРѕСЂР·РёРЅР°" />
+          <div class="carousel_slide">
+            <div class="slide_image"></div>
+            <div class="slide_content">
+              <h1 class="slide_title">Слайд 2</h1>
+              <p class="slide_subtitle">Описание слайда 2</p>
+              <a href="/collection/classic" class="btn btn_primary">Подробнее</a>
+            </div>
+          </div>
+
+          <div class="carousel_slide">
+            <div class="slide_image"></div>
+            <div class="slide_content">
+              <h1 class="slide_title">Слайд 3</h1>
+              <p class="slide_subtitle">Описание слайда 3</p>
+              <a href="/collection/sport" class="btn btn_primary">Подробнее</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel_indicators">
+          <button class="indicator active"></button>
+          <button class="indicator"></button>
+          <button class="indicator"></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="categories_grid">
+      <div class="categories_container">
+        <div class="grid_three">
+          <div class="category_card active">
+            <a href="/collections" class="category_link">
+              <img src="images/categories/glasses.jpg" alt="Очки" class="category_image" />
+
+              <div class="category_content">
+                <p class="category_title">коллекции</p>
+                <p class="category_subtitle">Оптика без времени</p>
+              </div>
             </a>
+          </div>
+          <div class="category_card">
+            <a href="/trends" class="category_link">
+              <div class="category_image category_image_sunglasses"></div>
+
+              <div class="category_content trend">
+                <p class="category_title">тренды</p>
+                <p class="category_subtitle">Солнцезащитные очки — 2025</p>
+              </div>
+            </a>
+          </div>
+          <div class="category_card">
+            <a href="/collections/frames" class="category_link">
+              <img src="images/categories/frames.jpg" alt="Оправы-невидимки" class="category_image" />
+              <div class="category_content">
+                <p class="category_title">коллекции</p>
+                <p class="category_subtitle">Невидимые оправы</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="categories_nav hidden-desktop">
+          <button class="categories_nav_btn categories_nav_prev" aria-label="Предыдущий слайд">
+            <img src="images/l_arr.svg" alt="левая стрелка" />
+          </button>
+          <button class="categories_nav_btn categories_nav_next" aria-label="Следующий слайд">
+            <img src="images/r_arr.svg" alt="правая стрелка" />
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="products_carousel">
+      <div class="products_container">
+        <h2 class="section_title">В центре внимания</h2>
+        <div class="products_carousel_container">
+          <div class="products_carousel_track">
+            <div class="product_slide active">
+              <div class="product_card">
+                <div class="product_image_left">
+                  <img src="images/products/model1.jpg" alt="Модель в очках Clear Sky" class="product_image" />
+                  <div class="image_overlay"></div>
+                  <div class="image_text_left">
+                    <div class="main_caption">Стиль с заботой о будущем</div>
+                  </div>
+                </div>
+
+                <div class="product_image_right">
+                  <div class="product_image_container">
+                    <img src="images/products/product1.jpg" alt="Оправа Clear Sky" class="product_image" />
+                    <div class="image_overlay"></div>
+
+                    <a href="/wishlist" class="wishlist_btn_product" title="Добавить в избранное">
+                      <img src="icons/heart.svg" alt="Избранное" />
+                    </a>
+                    <div class="image_text_right">
+                      <h3 class="product_name">Оправа Clear Sky</h3>
+                      <div class="product_price">от 8 666 &#8381;</div>
+                      <div class="product_actions">
+                        <a href="/try-on" class="product_action_link">примерить онлайн</a>
+                        <a href="/product/1" class="product_action_link">узнать подробнее</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 2 -->
+            <div class="product_slide">
+              <div class="product_card">
+                <div class="product_image_left">
+                  <img src="images/products/model1.jpg" alt="Модель в очках Clear Sky" class="product_image" />
+                  <div class="image_overlay"></div>
+                  <div class="image_text_left">
+                    <div class="main_caption">2</div>
+                  </div>
+                </div>
+
+                <div class="product_image_right">
+                  <div class="product_image_container">
+                    <img src="images/products/product1.jpg" alt="Оправа Clear Sky" class="product_image" />
+                    <div class="image_overlay"></div>
+                    <button class="wishlist_btn_product" title="Добавить в избранное">
+                      <img src="icons/heart.svg" alt="Избранное" />
+                    </button>
+                    <div class="image_text_right">
+                      <h3 class="product_name">Оправа Clear Sky</h3>
+                      <div class="product_price">от 8 666 &#8381;</div>
+                      <div class="product_actions">
+                        <a href="/try-on" class="product_action_link">примерить онлайн</a>
+                        <a href="/product/2" class="product_action_link">узнать подробнее</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 3 -->
+            <div class="product_slide">
+              <div class="product_card">
+                <div class="product_image_left">
+                  <img src="images/products/model1.jpg" alt="Модель в очках Clear Sky" class="product_image" />
+                  <div class="image_overlay"></div>
+                  <div class="image_text_left">
+                    <div class="main_caption">3</div>
+                  </div>
+                </div>
+
+                <div class="product_image_right">
+                  <div class="product_image_container">
+                    <img src="images/products/product1.jpg" alt="Оправа Clear Sky" class="product_image" />
+                    <div class="image_overlay"></div>
+                    <button class="wishlist_btn_product" title="Добавить в избранное">
+                      <img src="icons/heart.svg" alt="Избранное" />
+                    </button>
+                    <div class="image_text_right">
+                      <h3 class="product_name">Оправа Clear Sky</h3>
+                      <div class="product_price">от 8 666 &#8381;</div>
+                      <div class="product_actions">
+                        <a href="/try-on3" class="product_action_link">примерить онлайн</a>
+                        <a href="/product/3" class="product_action_link">узнать подробнее</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 4 -->
+            <div class="product_slide">
+              <div class="product_card">
+                <div class="product_image_left">
+                  <img src="images/products/model1.jpg" alt="Модель в очках Clear Sky" class="product_image" />
+                  <div class="image_overlay"></div>
+                  <div class="image_text_left">
+                    <div class="main_caption">4</div>
+                  </div>
+                </div>
+
+                <div class="product_image_right">
+                  <div class="product_image_container">
+                    <img src="images/products/product1.jpg" alt="Оправа Clear Sky" class="product_image" />
+                    <div class="image_overlay"></div>
+                    <button class="wishlist_btn_product" title="Добавить в избранное">
+                      <img src="icons/heart.svg" alt="Избранное" />
+                    </button>
+                    <div class="image_text_right">
+                      <h3 class="product_name">Оправа Clear Sky</h3>
+                      <div class="product_price">от 8 666 &#8381;</div>
+                      <div class="product_actions">
+                        <a href="/try-on4" class="product_action_link">примерить онлайн</a>
+                        <a href="/product/4" class="product_action_link">узнать подробнее</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 5 -->
+            <div class="product_slide">
+              <div class="product_card">
+                <div class="product_image_left">
+                  <img src="images/products/model1.jpg" alt="Модель в очках Clear Sky" class="product_image" />
+                  <div class="image_overlay"></div>
+                  <div class="image_text_left">
+                    <div class="main_caption">5</div>
+                  </div>
+                </div>
+
+                <div class="product_image_right">
+                  <div class="product_image_container">
+                    <img src="images/products/product1.jpg" alt="Оправа Clear Sky" class="product_image" />
+                    <div class="image_overlay"></div>
+                    <button class="wishlist_btn_product" title="Добавить в избранное">
+                      <img src="icons/heart.svg" alt="Избранное" />
+                    </button>
+                    <div class="image_text_right">
+                      <h3 class="product_name">Оправа Clear Sky</h3>
+                      <div class="product_price">от 8 666 &#8381;</div>
+                      <div class="product_actions">
+                        <a href="/try-on5" class="product_action_link">примерить онлайн</a>
+                        <a href="/product/5" class="product_action_link">узнать подробнее</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="products_carousel_indicators">
+            <button class="product_indicator active"></button>
+            <button class="product_indicator"></button>
+            <button class="product_indicator"></button>
+            <button class="product_indicator"></button>
+            <button class="product_indicator"></button>
           </div>
         </div>
       </div>
-    </header>
+    </section>
 
-    <main>
-      <section class="hero_carousel">
-        <div class="carousel_container">
-          <div class="carousel_track">
-            <div class="carousel_slide active">
-              <img
-                src="images/hero/slide1.jpg"
-                alt="Р›РµРіРєРѕСЃС‚СЊ РІРЅРµ РіСЂР°РІРёС‚Р°С†РёРё"
-                class="slide_image"
-                srcset="
-                  images/hero/slide1.jpg        1920w,
-                  images/hero/slide1-tablet.jpg  768w,
-                  images/hero/slide1-mobile.jpg  480w
-                "
-              />
-              />
-              <div class="slide_content">
-                <h1 class="slide_title">Р›С‘РіРєРѕСЃС‚СЊ РІРЅРµ РіСЂР°РІРёС‚Р°С†РёРё</h1>
-                <p class="slide_subtitle">РќРµРІРµСЃРѕРјС‹Рµ С‚РёС‚Р°РЅРѕРІС‹Рµ РѕРїСЂР°РІС‹</p>
-                <a href="/collection/titanium" class="btn btn_primary"
-                  >РџРѕРґСЂРѕР±РЅРµРµ</a
-                >
+    <section class="collections_gallery">
+      <div class="about_text">
+        <p class="about_paragraph">
+          Silhouette — это абсолютная<br />
+          точность, инновации<br />
+          и внимание к деталям.
+        </p>
+      </div>
+
+      <div class="collections_container">
+        <div class="collections_grid">
+          <div class="collection_item tall">
+            <a href="/collection/summer-2025" class="collection_link">
+              <img src="images/collections/summer.jpg" alt="Лето 2025" />
+              <div class="collection_content">
+                <h3>Лето 2025</h3>
+                <span>открыть коллекцию</span>
               </div>
-            </div>
-            <div class="carousel_slide">
-              <img
-                src="images/hero/slide2.jpg"
-                alt="РЎС‚РёР»СЊ РЅР° РєР°Р¶РґС‹Р№ РґРµРЅСЊ"
-                class="slide_image"
-              />
-              <div class="slide_content">
-                <h1 class="slide_title">РЎР»Р°Р№Рґ 2</h1>
-                <p class="slide_subtitle">РћРїРёСЃР°РЅРёРµ СЃР»Р°Р№РґР° 2</p>
-                <a href="/collection/classic" class="btn btn_primary"
-                  >РџРѕРґСЂРѕР±РЅРµРµ</a
-                >
-              </div>
-            </div>
-            <div class="carousel_slide">
-              <img
-                src="images/hero/slide3.jpg"
-                alt="РЎРїРѕСЂС‚РёРІРЅС‹Рµ С‚РµС…РЅРѕР»РѕРіРёРё"
-                class="slide_image"
-              />
-              <div class="slide_content">
-                <h1 class="slide_title">РЎР»Р°Р№Рґ 3</h1>
-                <p class="slide_subtitle">РћРїРёСЃР°РЅРёРµ СЃР»Р°Р№РґР° 3</p>
-                <a href="/collection/sport" class="btn btn_primary"
-                  >РџРѕРґСЂРѕР±РЅРµРµ</a
-                >
-              </div>
-            </div>
+            </a>
           </div>
 
-          <div class="carousel_indicators">
-            <button class="indicator active"></button>
-            <button class="indicator"></button>
-            <button class="indicator"></button>
+          <div class="collection_item medium">
+            <a href="/collection/illusion-lite" class="collection_link">
+              <img src="images/collections/illusion.jpg" alt="Illusion Lite" />
+              <div class="collection_content">
+                <h3>Accent Shades: выразительный минимализм</h3>
+                <span>открыть коллекцию</span>
+              </div>
+            </a>
+          </div>
+
+          <div class="collection_item small">
+            <a href="/collection/accent-shades" class="collection_link">
+              <img src="images/collections/accent.jpg" alt="Accent Shades" />
+              <div class="collection_content">
+                <h3>Illusion Lite: лёгкая классика на каждый деньes</h3>
+                <span>открыть коллекцию</span>
+              </div>
+            </a>
+          </div>
+
+          <div class="collection_item medium">
+            <a href="/collection/spielberg" class="collection_link">
+              <img src="images/collections/sport.jpg" alt="Коллекция Spielberg" />
+              <div class="collection_content">
+                <h3>Коллекция Spielberg: спортивный характер</h3>
+                <span>открыть коллекцию</span>
+              </div>
+            </a>
           </div>
         </div>
-      </section>
 
-      <section class="categories_grid">
-        <div class="categories_container">
-          <div class="grid_three">
-            <div class="category_card">
-              <a href="/collections" class="category_link">
-                <img
-                  src="images/categories/glasses.jpg"
-                  alt="РћС‡РєРё"
-                  class="category_image"
-                />
-                <div class="category_content">
-                  <p class="category_title">РєРѕР»Р»РµРєС†РёРё</p>
-                  <p class="category_subtitle">РћРїС‚РёРєР° Р±РµР· РІСЂРµРјРµРЅРё</p>
-                </div>
-              </a>
-            </div>
-            <div class="category_card">
-              <a href="/trends" class="category_link">
-                <img
-                  src="images/categories/sunglasses.jpg"
-                  alt="РЎРѕР»РЅРµС‡РЅС‹Рµ РѕС‡РєРё РЅР° РјРѕРґРµР»СЏС…"
-                  class="category_image"
-                />
-                <div class="category_content">
-                  <p class="category_title">С‚СЂРµРЅРґС‹</p>
-                  <p class="category_subtitle">РЎРѕР»РЅС†РµР·Р°С‰РёС‚РЅС‹Рµ РѕС‡РєРё вЂ” 2025</p>
-                </div>
-              </a>
-            </div>
-            <div class="category_card">
-              <a href="/collections/frames" class="category_link">
-                <img
-                  src="images/categories/frames.jpg"
-                  alt="РћРїСЂР°РІС‹-РЅРµРІРёРґРёРјРєРё"
-                  class="category_image"
-                />
-                <div class="category_content">
-                  <p class="category_title">РєРѕР»Р»РµРєС†РёРё</p>
-                  <p class="category_subtitle">РќРµРІРёРґРёРјС‹Рµ РѕРїСЂР°РІС‹</p>
-                </div>
-              </a>
-            </div>
-          </div>
+        <div class="gallery_actions">
+          <a href="/collections" class="btn btn_secondary">Все коллекции</a>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="products_carousel">
-        <div class="products_container">
-          <h2 class="section_title">Р’ С†РµРЅС‚СЂРµ РІРЅРёРјР°РЅРёСЏ</h2>
-          <div class="products_carousel_container">
-            <div class="products_carousel_track">
-              <div class="product_slide active">
-                <div class="product_card">
-                  <div class="product_image_left">
-                    <img
-                      src="images/products/model1.jpg"
-                      alt="РњРѕРґРµР»СЊ РІ РѕС‡РєР°С… Clear Sky"
-                      class="product_image"
-                    />
-                    <div class="image_overlay"></div>
-                    <div class="image_text_left">
-                      <div class="main_caption">РЎС‚РёР»СЊ СЃ Р·Р°Р±РѕС‚РѕР№ Рѕ Р±СѓРґСѓС‰РµРј</div>
-                    </div>
-                  </div>
-
-                  <div class="product_image_right">
-                    <img
-                      src="images/products/product1.jpg"
-                      alt="РћРїСЂР°РІР° Clear Sky"
-                      class="product_image"
-                    />
-                    <div class="image_overlay"></div>
-
-                    <a
-                      href="/wishlist"
-                      class="wishlist_btn_product"
-                      title="Р”РѕР±Р°РІРёС‚СЊ РІ РёР·Р±СЂР°РЅРЅРѕРµ"
-                    >
-                      <img src="icons/heart.svg" alt="РР·Р±СЂР°РЅРЅРѕРµ" />
-                    </a>
-                    <div class="image_text_right">
-                      <h3 class="product_name">РћРїСЂР°РІР° Clear Sky</h3>
-                      <div class="product_price">РѕС‚ 8 666 &#8381;</div>
-                      <div class="product_actions">
-                        <a href="/try-on" class="product_action_link"
-                          >РїСЂРёРјРµСЂРёС‚СЊ РѕРЅР»Р°Р№РЅ</a
-                        >
-                        <a href="/product/1" class="product_action_link"
-                          >СѓР·РЅР°С‚СЊ РїРѕРґСЂРѕР±РЅРµРµ</a
-                        >
-                      </div>
-                    </div>
-                  </div>
+    <section class="blog_preview">
+      <div class="container_blog_preview">
+        <h2 class="blog_preview_title">Новости и статьи</h2>
+        <div class="blog_grid">
+          <div class="blog_card">
+            <a href="/blog/1" class="blog_link">
+              <img src="images/blog/1.jpg" alt="Как выбрать идеальные очки" class="blog_image" />
+              <div class="blog_content">
+                <h3 class="blog_title">
+                  Как выбрать идеальные очки: форма, стиль, технология
+                </h3>
+                <div class="blog_meta">
+                  <span class="blog_date">16.07.2025</span>
                 </div>
               </div>
-              <!-- 2 -->
-              <div class="product_slide">
-                <div class="product_card">
-                  <div class="product_image_left">
-                    <img
-                      src="images/products/model1.jpg"
-                      alt="РњРѕРґРµР»СЊ РІ РѕС‡РєР°С… Clear Sky"
-                      class="product_image"
-                    />
-                    <div class="image_overlay"></div>
-                    <div class="image_text_left">
-                      <div class="main_caption">2</div>
-                    </div>
-                  </div>
-
-                  <div class="product_image_right">
-                    <img
-                      src="images/products/product1.jpg"
-                      alt="РћРїСЂР°РІР° Clear Sky"
-                      class="product_image"
-                    />
-                    <div class="image_overlay"></div>
-                    <button
-                      class="wishlist_btn_product"
-                      title="Р”РѕР±Р°РІРёС‚СЊ РІ РёР·Р±СЂР°РЅРЅРѕРµ"
-                    >
-                      <img src="icons/heart.svg" alt="РР·Р±СЂР°РЅРЅРѕРµ" />
-                    </button>
-                    <div class="image_text_right">
-                      <h3 class="product_name">РћРїСЂР°РІР° Clear Sky</h3>
-                      <div class="product_price">РѕС‚ 8 666 &#8381;</div>
-                      <div class="product_actions">
-                        <a href="/try-on" class="product_action_link"
-                          >РїСЂРёРјРµСЂРёС‚СЊ РѕРЅР»Р°Р№РЅ</a
-                        >
-                        <a href="/product/1" class="product_action_link"
-                          >СѓР·РЅР°С‚СЊ РїРѕРґСЂРѕР±РЅРµРµ</a
-                        >
-                      </div>
-                    </div>
-                  </div>
+            </a>
+          </div>
+          <div class="blog_card">
+            <a href="/blog/2" class="blog_link">
+              <img src="images/blog/2.jpg" alt="Экологичный взгляд" class="blog_image" />
+              <div class="blog_content">
+                <h3 class="blog_title">
+                  Экологичный взгляд: как создаются устойчивые очки будущего
+                </h3>
+                <div class="blog_meta">
+                  <span class="blog_date">16.07.2025</span>
                 </div>
               </div>
-              <!-- 3 -->
-              <div class="product_slide">
-                <div class="product_card">
-                  <div class="product_image_left">
-                    <img
-                      src="images/products/model1.jpg"
-                      alt="РњРѕРґРµР»СЊ РІ РѕС‡РєР°С… Clear Sky"
-                      class="product_image"
-                    />
-                    <div class="image_overlay"></div>
-                    <div class="image_text_left">
-                      <div class="main_caption">3</div>
-                    </div>
-                  </div>
-
-                  <div class="product_image_right">
-                    <img
-                      src="images/products/product1.jpg"
-                      alt="РћРїСЂР°РІР° Clear Sky"
-                      class="product_image"
-                    />
-                    <div class="image_overlay"></div>
-                    <button
-                      class="wishlist_btn_product"
-                      title="Р”РѕР±Р°РІРёС‚СЊ РІ РёР·Р±СЂР°РЅРЅРѕРµ"
-                    >
-                      <img src="icons/heart.svg" alt="РР·Р±СЂР°РЅРЅРѕРµ" />
-                    </button>
-                    <div class="image_text_right">
-                      <h3 class="product_name">РћРїСЂР°РІР° Clear Sky</h3>
-                      <div class="product_price">РѕС‚ 8 666 &#8381;</div>
-                      <div class="product_actions">
-                        <a href="/try-on" class="product_action_link"
-                          >РїСЂРёРјРµСЂРёС‚СЊ РѕРЅР»Р°Р№РЅ</a
-                        >
-                        <a href="/product/1" class="product_action_link"
-                          >СѓР·РЅР°С‚СЊ РїРѕРґСЂРѕР±РЅРµРµ</a
-                        >
-                      </div>
-                    </div>
-                  </div>
+            </a>
+          </div>
+          <div class="blog_card">
+            <a href="/blog/3" class="blog_link">
+              <img src="images/blog/3.jpg" alt="Silhouette" class="blog_image" />
+              <div class="blog_content">
+                <h3 class="blog_title">
+                  Silhouette: от австрийской мастерской к иконе минимализма
+                </h3>
+                <div class="blog_meta">
+                  <span class="blog_date">16.07.2025</span>
                 </div>
               </div>
-              <!-- 4 -->
-              <div class="product_slide">
-                <div class="product_card">
-                  <div class="product_image_left">
-                    <img
-                      src="images/products/model1.jpg"
-                      alt="РњРѕРґРµР»СЊ РІ РѕС‡РєР°С… Clear Sky"
-                      class="product_image"
-                    />
-                    <div class="image_overlay"></div>
-                    <div class="image_text_left">
-                      <div class="main_caption">4</div>
-                    </div>
-                  </div>
-
-                  <div class="product_image_right">
-                    <img
-                      src="images/products/product1.jpg"
-                      alt="РћРїСЂР°РІР° Clear Sky"
-                      class="product_image"
-                    />
-                    <div class="image_overlay"></div>
-                    <button
-                      class="wishlist_btn_product"
-                      title="Р”РѕР±Р°РІРёС‚СЊ РІ РёР·Р±СЂР°РЅРЅРѕРµ"
-                    >
-                      <img src="icons/heart.svg" alt="РР·Р±СЂР°РЅРЅРѕРµ" />
-                    </button>
-                    <div class="image_text_right">
-                      <h3 class="product_name">РћРїСЂР°РІР° Clear Sky</h3>
-                      <div class="product_price">РѕС‚ 8 666 &#8381;</div>
-                      <div class="product_actions">
-                        <a href="/try-on" class="product_action_link"
-                          >РїСЂРёРјРµСЂРёС‚СЊ РѕРЅР»Р°Р№РЅ</a
-                        >
-                        <a href="/product/1" class="product_action_link"
-                          >СѓР·РЅР°С‚СЊ РїРѕРґСЂРѕР±РЅРµРµ</a
-                        >
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- 5 -->
-              <div class="product_slide">
-                <div class="product_card">
-                  <div class="product_image_left">
-                    <img
-                      src="images/products/model1.jpg"
-                      alt="РњРѕРґРµР»СЊ РІ РѕС‡РєР°С… Clear Sky"
-                      class="product_image"
-                    />
-                    <div class="image_overlay"></div>
-                    <div class="image_text_left">
-                      <div class="main_caption">5</div>
-                    </div>
-                  </div>
-
-                  <div class="product_image_right">
-                    <img
-                      src="images/products/product1.jpg"
-                      alt="РћРїСЂР°РІР° Clear Sky"
-                      class="product_image"
-                    />
-                    <div class="image_overlay"></div>
-                    <button
-                      class="wishlist_btn_product"
-                      title="Р”РѕР±Р°РІРёС‚СЊ РІ РёР·Р±СЂР°РЅРЅРѕРµ"
-                    >
-                      <img src="icons/heart.svg" alt="РР·Р±СЂР°РЅРЅРѕРµ" />
-                    </button>
-                    <div class="image_text_right">
-                      <h3 class="product_name">РћРїСЂР°РІР° Clear Sky</h3>
-                      <div class="product_price">РѕС‚ 8 666 &#8381;</div>
-                      <div class="product_actions">
-                        <a href="/try-on" class="product_action_link"
-                          >РїСЂРёРјРµСЂРёС‚СЊ РѕРЅР»Р°Р№РЅ</a
-                        >
-                        <a href="/product/1" class="product_action_link"
-                          >СѓР·РЅР°С‚СЊ РїРѕРґСЂРѕР±РЅРµРµ</a
-                        >
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- РРЅРґРёРєР°С‚РѕСЂС‹ -->
-            <div class="products_carousel_indicators">
-              <button class="product_indicator active"></button>
-              <button class="product_indicator"></button>
-              <button class="product_indicator"></button>
-              <button class="product_indicator"></button>
-              <button class="product_indicator"></button>
-            </div>
+            </a>
           </div>
         </div>
-      </section>
-
-      <section class="collections_gallery">
-        <div class="about_text">
-          <p class="about_paragraph">
-            Silhouette вЂ” СЌС‚Рѕ Р°Р±СЃРѕР»СЋС‚РЅР°СЏ<br />
-            С‚РѕС‡РЅРѕСЃС‚СЊ, РёРЅРЅРѕРІР°С†РёРё<br />
-            Рё РІРЅРёРјР°РЅРёРµ Рє РґРµС‚Р°Р»СЏРј.
-          </p>
+        <div class="blog_actions">
+          <a href="/blog" class="btn btn_secondary">перейти в блог</a>
         </div>
+      </div>
+    </section>
 
-        <div class="collections_container">
-          <div class="collections_grid">
-            <div class="collection_item tall">
-              <a href="/collection/summer-2025" class="collection_link">
-                <img src="images/collections/summer.jpg" alt="Р›РµС‚Рѕ 2025" />
-                <div class="collection_content">
-                  <h3>Р›РµС‚Рѕ 2025</h3>
-                  <span>РѕС‚РєСЂС‹С‚СЊ РєРѕР»Р»РµРєС†РёСЋ</span>
-                </div>
-              </a>
-            </div>
+    <section class="advantages" aria-label="Преимущества нашей компании">
+      <div class="container_advantages">
+        <ul class="advantages_grid" role="list">
+          <li class="advantage_item">
+            <figure>
+              <img src="images/advantages/icon1.png" alt="" aria-hidden="true" />
+              <figcaption class="advantage_text">
+                Финальная стоимость понятна ещё на этапе выбора
+              </figcaption>
+            </figure>
+          </li>
+          <li class="advantage_item">
+            <figure>
+              <img src="images/advantages/icon2.png" alt="" aria-hidden="true" />
+              <figcaption class="advantage_text">
+                Посадка и выправка с учётом ваших особенностей
+              </figcaption>
+            </figure>
+          </li>
+          <li class="advantage_item">
+            <figure>
+              <img src="images/advantages/icon3.png" alt="" aria-hidden="true" />
+              <figcaption class="advantage_text">
+                Доставка до двери по Москве и регионам
+              </figcaption>
+            </figure>
+          </li>
+          <li class="advantage_item">
+            <figure>
+              <img src="images/advantages/icon4.png" alt="" aria-hidden="true" />
+              <figcaption class="advantage_text">
+                Гарантия 365 дней на очки и оправы
+              </figcaption>
+            </figure>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
 
-            <div class="collection_item medium">
-              <a href="/collection/illusion-lite" class="collection_link">
-                <img
-                  src="images/collections/illusion.jpg"
-                  alt="Illusion Lite"
-                />
-                <div class="collection_content">
-                  <h3>Accent Shades: РІС‹СЂР°Р·РёС‚РµР»СЊРЅС‹Р№ РјРёРЅРёРјР°Р»РёР·Рј</h3>
-                  <span>РѕС‚РєСЂС‹С‚СЊ РєРѕР»Р»РµРєС†РёСЋ</span>
-                </div>
-              </a>
-            </div>
+  <footer class="footer">
+    <p>реализовано без футера</p>
+  </footer>
 
-            <div class="collection_item small">
-              <a href="/collection/accent-shades" class="collection_link">
-                <img src="images/collections/accent.jpg" alt="Accent Shades" />
-                <div class="collection_content">
-                  <h3>Illusion Lite: Р»С‘РіРєР°СЏ РєР»Р°СЃСЃРёРєР° РЅР° РєР°Р¶РґС‹Р№ РґРµРЅСЊes</h3>
-                  <span>РѕС‚РєСЂС‹С‚СЊ РєРѕР»Р»РµРєС†РёСЋ</span>
-                </div>
-              </a>
-            </div>
+  <script src="script.js"></script>
+</body>
 
-            <div class="collection_item medium">
-              <a href="/collection/spielberg" class="collection_link">
-                <img
-                  src="images/collections/sport.jpg"
-                  alt="РљРѕР»Р»РµРєС†РёСЏ Spielberg"
-                />
-                <div class="collection_content">
-                  <h3>РљРѕР»Р»РµРєС†РёСЏ Spielberg: СЃРїРѕСЂС‚РёРІРЅС‹Р№ С…Р°СЂР°РєС‚РµСЂ</h3>
-                  <span>РѕС‚РєСЂС‹С‚СЊ РєРѕР»Р»РµРєС†РёСЋ</span>
-                </div>
-              </a>
-            </div>
-          </div>
-
-          <div class="gallery_actions">
-            <a href="/collections" class="btn btn_secondary">Р’СЃРµ РєРѕР»Р»РµРєС†РёРё</a>
-          </div>
-        </div>
-      </section>
-
-      <section class="blog_preview">
-        <div class="container_blog_preview">
-          <h2 class="blog_preview_title">РќРѕРІРѕСЃС‚Рё Рё СЃС‚Р°С‚СЊРё</h2>
-          <div class="blog_grid">
-            <div class="blog_card">
-              <a href="/blog/1" class="blog_link">
-                <img
-                  src="images/blog/1.jpg"
-                  alt="РљР°Рє РІС‹Р±СЂР°С‚СЊ РёРґРµР°Р»СЊРЅС‹Рµ РѕС‡РєРё"
-                  class="blog_image"
-                />
-                <div class="blog_content">
-                  <h3 class="blog_title">
-                    РљР°Рє РІС‹Р±СЂР°С‚СЊ РёРґРµР°Р»СЊРЅС‹Рµ РѕС‡РєРё: С„РѕСЂРјР°, СЃС‚РёР»СЊ, С‚РµС…РЅРѕР»РѕРіРёСЏ
-                  </h3>
-                  <div class="blog_meta">
-                    <span class="blog_date">16.07.2025</span>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div class="blog_card">
-              <a href="/blog/2" class="blog_link">
-                <img
-                  src="images/blog/2.jpg"
-                  alt="Р­РєРѕР»РѕРіРёС‡РЅС‹Р№ РІР·РіР»СЏРґ"
-                  class="blog_image"
-                />
-                <div class="blog_content">
-                  <h3 class="blog_title">
-                    Р­РєРѕР»РѕРіРёС‡РЅС‹Р№ РІР·РіР»СЏРґ: РєР°Рє СЃРѕР·РґР°СЋС‚СЃСЏ СѓСЃС‚РѕР№С‡РёРІС‹Рµ РѕС‡РєРё Р±СѓРґСѓС‰РµРіРѕ
-                  </h3>
-                  <div class="blog_meta">
-                    <span class="blog_date">16.07.2025</span>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div class="blog_card">
-              <a href="/blog/3" class="blog_link">
-                <img
-                  src="images/blog/3.jpg"
-                  alt="Silhouette"
-                  class="blog_image"
-                />
-                <div class="blog_content">
-                  <h3 class="blog_title">
-                    Silhouette: РѕС‚ Р°РІСЃС‚СЂРёР№СЃРєРѕР№ РјР°СЃС‚РµСЂСЃРєРѕР№ Рє РёРєРѕРЅРµ РјРёРЅРёРјР°Р»РёР·РјР°
-                  </h3>
-                  <div class="blog_meta">
-                    <span class="blog_date">16.07.2025</span>
-                  </div>
-                </div>
-              </a>
-            </div>
-          </div>
-          <div class="blog_actions">
-            <a href="/blog" class="btn btn_secondary">РїРµСЂРµР№С‚Рё РІ Р±Р»РѕРі</a>
-          </div>
-        </div>
-      </section>
-
-      <section class="advantages" aria-label="РџСЂРµРёРјСѓС‰РµСЃС‚РІР° РЅР°С€РµР№ РєРѕРјРїР°РЅРёРё">
-        <div class="container_advantages">
-          <ul class="advantages_grid" role="list">
-            <li class="advantage_item">
-              <figure>
-                <img
-                  src="images/advantages/icon1.png"
-                  alt=""
-                  aria-hidden="true"
-                />
-                <figcaption class="advantage_text">
-                  Р¤РёРЅР°Р»СЊРЅР°СЏ СЃС‚РѕРёРјРѕСЃС‚СЊ РїРѕРЅСЏС‚РЅР° РµС‰С‘ РЅР° СЌС‚Р°РїРµ РІС‹Р±РѕСЂР°
-                </figcaption>
-              </figure>
-            </li>
-            <li class="advantage_item">
-              <figure>
-                <img
-                  src="images/advantages/icon2.png"
-                  alt=""
-                  aria-hidden="true"
-                />
-                <figcaption class="advantage_text">
-                  РџРѕСЃР°РґРєР° Рё РІС‹РїСЂР°РІРєР° СЃ СѓС‡С‘С‚РѕРј РІР°С€РёС… РѕСЃРѕР±РµРЅРЅРѕСЃС‚РµР№
-                </figcaption>
-              </figure>
-            </li>
-            <li class="advantage_item">
-              <figure>
-                <img
-                  src="images/advantages/icon3.png"
-                  alt=""
-                  aria-hidden="true"
-                />
-                <figcaption class="advantage_text">
-                  Р”РѕСЃС‚Р°РІРєР° РґРѕ РґРІРµСЂРё РїРѕ РњРѕСЃРєРІРµ Рё СЂРµРіРёРѕРЅР°Рј
-                </figcaption>
-              </figure>
-            </li>
-            <li class="advantage_item">
-              <figure>
-                <img
-                  src="images/advantages/icon4.png"
-                  alt=""
-                  aria-hidden="true"
-                />
-                <figcaption class="advantage_text">
-                  Р“Р°СЂР°РЅС‚РёСЏ 365 РґРЅРµР№ РЅР° РѕС‡РєРё Рё РѕРїСЂР°РІС‹
-                </figcaption>
-              </figure>
-            </li>
-          </ul>
-        </div>
-      </section>
-    </main>
-
-    <footer class="footer">
-      <p>СЂРµР°Р»РёР·РѕРІР°РЅРѕ Р±РµР· С„СѓС‚РµСЂР°</p>
-    </footer>
-
-    <script src="script.js"></script>
-  </body>
 </html>

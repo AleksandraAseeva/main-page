@@ -1,7 +1,7 @@
 :root{
 	--color-white:#fff;
 	--color-dark:#231f20;
-	--color-dark-hover:#333333;
+	--color-dark-hover:#333;
 	--color-dark-click:#2e292a;
 	--color-dark-light:rgba(35,31,32,0.4);
 	--color-overlay:rgba(0,0,0,0.1);
@@ -24,7 +24,7 @@ body{
 }
 
 .hidden{
-	display:none !important;
+	display:none!important;
 }
 
 #main_header{
@@ -154,9 +154,15 @@ body{
 }
 
 .slide_image{
+	position:absolute;
+	top:0;
+	left:0;
 	width:100%;
 	height:100%;
-	object-fit:cover;
+	background-size:cover;
+	background-position:center;
+	z-index:0;
+	background-image:url("images/hero/slide1.jpg");
 }
 
 .slide_content{
@@ -176,6 +182,7 @@ body{
 	text-align:center;
 	letter-spacing:-0.02rem;
 	margin:0;
+	white-space:nowrap;
 }
 
 .slide_subtitle{
@@ -238,27 +245,34 @@ body{
 }
 
 .categories_container{
-	margin:0 auto;
-	padding:0 1.25rem;
+	margin:0 1.25rem;
 }
 
 .grid_three{
 	display:grid;
 	grid-template-columns:repeat(3,1fr);
-	gap:2.7rem;
+	gap:2.5rem;
 }
 
 .category_card{
 	position:relative;
 	overflow:hidden;
+	width:100%;
 }
 
 .category_link{
 	display:block;
-	width:22.5rem;
+	width:100%;
 	height:22.5rem;
 	text-decoration:none;
 	color:var(--color-white);
+}
+
+.category_image{
+	width:100%;
+	height:100%;
+	object-fit:cover;
+	transition:transform 0.3s ease;
 }
 
 .category_card:hover .category_image{
@@ -328,6 +342,8 @@ body{
 	display:flex;
 	height:100%;
 	margin:0;
+	align-items:stretch;
+	background-color:#f9f9f9;
 }
 
 .product_image_left,
@@ -335,6 +351,14 @@ body{
 	flex:1;
 	position:relative;
 	overflow:hidden;
+}
+
+.product_image{
+	width:100%;
+	height:100%;
+	object-fit:cover;
+	object-position:center;
+	transition:transform 0.3s ease;
 }
 
 .image_overlay{
@@ -413,6 +437,10 @@ body{
 	text-align:center;
 	text-transform:uppercase;
 	letter-spacing:0.05rem;
+}
+
+.product_slide:not(.active){
+	display:none;
 }
 
 .product_action_link:hover{
@@ -520,29 +548,24 @@ body{
 	border-bottom:0.0625rem solid var(--color-dark);
 }
 
-.collection_item.tall{
+.collections_grid>.collection_item:nth-child(1){
 	grid-column:1;
-	grid-row:1 / span 2;
+	grid-row:1/span 2;
 }
 
-.collections_grid > .collection_item:nth-child(1){
-	grid-column:1;
-	grid-row:1 / span 2;
-}
-
-.collections_grid > .collection_item:nth-child(3){
+.collections_grid>.collection_item:nth-child(3){
 	grid-column:1;
 	grid-row:3;
 }
 
-.collections_grid > .collection_item:nth-child(2){
+.collections_grid>.collection_item:nth-child(2){
 	grid-column:2;
 	grid-row:1;
 }
 
-.collections_grid > .collection_item:nth-child(4){
+.collections_grid>.collection_item:nth-child(4){
 	grid-column:2;
-	grid-row:2 / span 2;
+	grid-row:2/span 2;
 }
 
 .gallery_actions{
@@ -590,9 +613,6 @@ body{
 	display:grid;
 	grid-template-columns:repeat(3,1fr);
 	gap:1.875rem;
-}
-
-.blog_card{
 }
 
 .blog_link{
@@ -670,4 +690,531 @@ body{
 	margin:0;
 	max-width:100%;
 	word-wrap:break-word;
+}
+
+.hidden-desktop{
+	display:none;
+}
+
+.category_image_sunglasses{
+	background-image:url("images/categories/sunglasses.jpg");
+	background-repeat:no-repeat;
+	background-size:cover;
+	background-position:center;
+	width:100%;
+	height:100%;
+}
+
+@media(max-width:1080px){
+	.header_nav{
+		display:none;
+	}
+
+	.header_inner{
+		margin:0.8rem;
+	}
+
+	.hero_carousel{
+		height:100vh;
+	}
+
+	.slide_image{
+		background-image:url("images/hero/slide1-tablet.jpg");
+	}
+
+	.slide_content{
+		top:28.5rem;
+	}
+
+	.slide_title{
+		font-size:3.3rem;
+		letter-spacing:0.225rem;
+	}
+
+	.slide_subtitle{
+		margin-top:0.6rem;
+		font-size:1.7rem;
+		letter-spacing:0.03rem;
+	}
+
+	.btn{
+		font-size:1rem;
+		margin-top:2.4rem;
+	}
+
+	.btn_primary{
+		padding:0.9rem 3.5rem;
+	}
+
+	.carousel_indicators{
+		bottom:2.5rem;
+		gap:0.8rem;
+	}
+
+	.indicator{
+		width:0.8rem;
+		height:0.8rem;
+	}
+
+	.categories_grid{
+		padding:3rem 0;
+	}
+
+	.grid_three{
+		gap:2rem;
+	}
+
+	.category_link{
+		height:18rem;
+	}
+
+	.category_image{
+		width:100%;
+		height:100%;
+		object-fit:cover;
+	}
+
+	.category_content{
+		bottom:2.5rem;
+		left:1.5rem;
+	}
+
+	.category_title{
+		font-size:0.8rem;
+		letter-spacing:0.1rem;
+		padding-bottom:0.25rem;
+	}
+
+	.category_subtitle{
+		font-size:1.3rem;
+		letter-spacing:0.085rem;
+	}
+
+	.category_content.trend{
+		bottom:1.3rem;
+		left:1.5rem;
+	}
+
+	.category_content.trend .category_subtitle{
+		line-height:1.5rem;
+		width:80%;
+	}
+
+	.products_carousel{
+		padding:3rem 0;
+	}
+
+	.section_title{
+		font-size:2.45rem;
+		margin-bottom:2.7rem;
+	}
+
+	.products_carousel_container{
+		padding:0 1.6rem;
+	}
+
+	.products_carousel_track{
+		height:28.3rem;
+	}
+
+	.product_slide{
+		gap:5rem;
+	}
+
+	.product_image_left .main_caption{
+		display:none;
+	}
+
+	.wishlist_btn_product{
+		width:3rem;
+		height:3rem;
+	}
+
+	.wishlist_btn_product img{
+		width:1.5rem;
+	}
+
+	.image_text_right{
+		position:absolute;
+		bottom:0;
+		padding-bottom:1rem;
+		width:100%;
+		display:flex;
+		flex-direction:column;
+		justify-content:end;
+		align-items:center;
+	}
+
+	.product_name{
+		font-size:1.55rem;
+		margin:0;
+	}
+
+	.product_price{
+		font-size:1.1rem;
+	}
+
+	.product_actions{
+		gap:3rem;
+		max-width:23.5rem;
+	}
+
+	.product_action_link{
+		font-size:0.9rem;
+		letter-spacing:0.05rem;
+	}
+
+	.product_card{
+		padding:0;
+	}
+
+	.products_carousel_indicators{
+		bottom:-3rem;
+		gap:0.85rem;
+	}
+
+	.product_indicator{
+		width:0.8rem;
+		height:0.8rem;
+	}
+
+	.collections_grid{
+		gap:1.5rem;
+	}
+
+	.collections_gallery{
+		padding:4rem 0 2rem;
+		margin:0 auto;
+	}
+
+	.about_paragraph{
+		font-size:2.5rem;
+		line-height:1.15;
+		margin-bottom:2.9rem;
+	}
+
+	.collection_content h3{
+		margin-top:0.5rem;
+		margin-bottom:0.9rem;
+		font-size:1.6rem;
+		line-height:1.05;
+	}
+
+	.collection_content span{
+		font-size:1rem;
+	}
+
+	.blog_preview_title{
+		font-size:2.8rem;
+		margin-bottom:1.5rem;
+	}
+
+	.blog_image{
+		width:100%;
+	}
+
+	.blog_title{
+		line-height:1.2;
+		margin-bottom:0.625rem;
+		font-size:1.15rem;
+	}
+
+	.advantage_item{
+		max-width:10rem;
+	}
+
+	.collections_grid{
+		padding:0 1.25rem;
+	}
+}
+
+@media(max-width:768px){
+	.advantages_grid{
+		grid-template-columns:repeat(2,auto);
+	}
+
+	.collections_grid{
+		grid-template-columns:repeat(1fr);
+	}
+
+	.collections_grid>.collection_item:nth-child(1){
+		grid-column:1/3;
+		grid-row:1/2;
+	}
+
+	.collections_grid>.collection_item:nth-child(3){
+		grid-column:1/3;
+		grid-row:2/3;
+	}
+
+	.collections_grid>.collection_item:nth-child(2){
+		grid-column:1/3;
+		grid-row:3/4;
+	}
+
+	.collections_grid>.collection_item:nth-child(4){
+		grid-column:1/3;
+		grid-row:4/5;
+	}
+
+	.collection_link img{
+		width:100%;
+	}
+
+	.slide_title{
+		white-space:wrap;
+		line-height:1;
+	}
+
+	.slide_content{
+		top:27rem;
+		width:100%;
+	}
+
+	.slide_image{
+		background-image:url("images/hero/slide1-mobile.jpg");
+	}
+
+	.grid_three{
+		display:block;
+		position:relative;
+		height:100%;
+		width:100%;
+		grid-template-columns:none;
+		gap:0;
+	}
+}
+
+@media(max-width:480px){
+	.container{
+		padding:0;
+	}
+
+	.slide_content{
+		top:26.5rem;
+		width:100%;
+	}
+
+	.slide_subtitle{
+		margin-top:1.5rem;
+		font-size:1.525rem;
+		letter-spacing:0.03rem;
+	}
+
+	.slide_title{
+		font-size:3rem;
+		letter-spacing:0;
+		white-space:wrap;
+		line-height:1;
+	}
+
+	.btn{
+		font-size:1rem;
+		margin-top:3rem;
+	}
+
+	.btn_primary{
+		padding:0.9rem 2.25rem;
+	}
+
+	.carousel_indicators{
+		bottom:4rem;
+	}
+
+	.categories_grid{
+		position:relative;
+		overflow:hidden;
+		padding:3rem 1rem;
+	}
+
+	.categories_container{
+		position:relative;
+		margin:0;
+		height:33.5rem;
+	}
+
+	.category_card{
+		position:absolute;
+		top:0;
+		left:0;
+		width:100%;
+		height:100%;
+		opacity:0;
+		transition:opacity 0.5s ease;
+	}
+
+	.category_card.active{
+		opacity:1;
+	}
+
+	.category_link{
+		height:100%;
+	}
+
+	.category_card:hover .category_image{
+		transform:none;
+	}
+
+	.categories_nav{
+		position:absolute;
+		top:46%;
+		width:100%;
+		display:flex;
+		justify-content:space-between;
+		z-index:10;
+		pointer-events:none;
+	}
+
+	.categories_nav_btn{
+		width:1rem;
+		height:2.5rem;
+		background-color:var(--color-white);
+		border:none;
+		display:flex;
+		align-items:center;
+		justify-content:center;
+		cursor:pointer;
+		pointer-events:auto;
+		box-shadow:0 0.125rem 0.5rem rgba(0,0,0,0.15);
+		transition:transform 0.2s ease,background-color 0.2s ease;
+	}
+
+	.categories_nav_btn:hover{
+		background-color:#f8f8f8;
+		transform:scale(1.05);
+	}
+
+	.categories_nav_btn:active{
+		transform:scale(0.95);
+	}
+
+	.categories_nav_btn svg{
+		width:1.2rem;
+		height:1.2rem;
+		fill:var(--color-dark);
+	}
+
+	.category_image_sunglasses{
+	    background-image:url("images/categories/sunglasses_tablet.png");
+	}
+
+	.category_subtitle{
+		font-size:1.6rem;
+	}
+
+	.category_content.trend{
+		bottom:2.5rem;
+	}
+
+	.products_carousel{
+		padding:1rem 0;
+	}
+
+	.section_title{
+		font-size:2.15rem;
+		margin-bottom:2rem;
+	}
+
+	.products_carousel_container{
+		padding:0 1rem;
+		height:auto;
+	}
+
+	.products_carousel_track{
+		height:auto;
+		min-height:50rem;
+	}
+
+	.product_slide{
+		position:relative;
+		opacity:1;
+		display:none;
+		height:auto;
+	}
+
+	.product_slide.active{
+		display:block;
+		opacity:1;
+	}
+
+	.product_card{
+		flex-direction:column;
+		height:auto;
+	}
+
+	.product_image_left,
+	.product_image_right{
+		flex:none;
+		width:100%;
+		height:auto;
+		position:relative;
+	}
+
+	.product_image_left{
+		height:19rem;
+		min-height:15rem;
+	}
+
+	.product_image_right .product_image{
+		min-height:25rem;
+	}
+
+	.product_image{
+		width:100%;
+		height:100%;
+		object-fit:cover;
+		object-position:center;
+	}
+
+	.product_image_container{
+		position:relative;
+	}
+
+	.products_carousel_track{
+		min-height:40rem;
+	}
+
+	.product_price{
+		font-size:0.9rem;
+		margin:0;
+	}
+
+	.product_actions{
+		flex-direction:column;
+		gap:0.8rem;
+		margin:0;
+		max-width:11rem;
+	}
+
+	.collections_gallery{
+		padding:5rem 0 3.7rem;
+	}
+
+	.about_paragraph{
+		font-size:2.16rem;
+		margin-bottom:4.5rem;
+	}
+
+	.blog_preview_title{
+		font-size:2.2rem;
+		margin-bottom:2rem;
+	}
+
+	.blog_preview{
+		padding:1rem 1rem 2.5rem;
+	}
+
+	.blog_grid{
+		grid-template-columns:repeat(1,1fr);
+		gap:3.1rem;
+	}
+
+	.advantage_item img{
+		margin-bottom:1rem;
+		max-width:12rem;
+	}
+
+	.advantage_item{
+		padding:1rem 1rem 0;
+	}
 }
